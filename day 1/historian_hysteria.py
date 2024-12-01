@@ -5,7 +5,7 @@ from collections import Counter
 # -- FETCH DATA -- #
 
 url = r"https://adventofcode.com/2024/day/1/input"
-session_cookie = r"53616c7465645f5f80c8fb65af28afb264ee4334aeb8ed8f369c8f7e13253279284416a4afe3682b4a32b70fa28dfbcca73162e27e6a293e85d6a7cda5776846"
+session_cookie = r"your cookie goes here"
 
 response = requests.get(url, cookies={"session": session_cookie})
 
@@ -41,7 +41,6 @@ right_values = quicksort(right_values)
 
 # -- COMPUTE DIFF -- #
 
-
 def rowwise_diff(left: list[int], right: list[int]) -> list[int]:
     if len(left) != len(right):
         raise ValueError("Lists have different lengths.")
@@ -51,7 +50,6 @@ def rowwise_diff(left: list[int], right: list[int]) -> list[int]:
 print(f"Difference between lists: {sum(rowwise_diff(left_values, right_values))}")
 
 # -- COMPUTE SIMILARITY -- #
-
 
 def fetch_occurrences(input: list[int], target: list[int]) -> list[int]:
     counter = Counter(target)
